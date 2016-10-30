@@ -17,6 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
   <title>Espace menbre</title>
 
@@ -42,6 +43,7 @@ if (session_status() == PHP_SESSION_NONE) {
           <!-- On n'affichie une navbar different en fonction de la présence ou non d'une authentification active -->
           <?php if (isset($_SESSION['auth'])): ?>
             <li><a href="logout.php">Se deconnecter</a></li>
+            <li><a href="chat.php">Chat</a></li>
           <?php else: ?>
             <li class="active"><a href="register.php">S'inscrire</a></li>
             <li><a href="login.php">Se connecter</a></li>
